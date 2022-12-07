@@ -1,6 +1,3 @@
-import { config } from "../../config";
-import { UnsupportedFileType } from "../../utils/errors/validationError";
-
 export enum FileTypes {
   IMAGE = "img",
   MP3 = "mp3",
@@ -10,13 +7,11 @@ export enum FileTypes {
 export const getContainerNameByFileType = (fileType: FileTypes) => {
   switch (fileType) {
     case FileTypes.IMAGE:
-      return config.azure.blobContainers.imageContainerName;
+      return "images";
     case FileTypes.MP3:
-      return config.azure.blobContainers.mp3ContainerName;
+      return "audio";
     case FileTypes.MP4:
-      return config.azure.blobContainers.mp4ContainerName;
-    default:
-      throw new UnsupportedFileType();
+      return "video";
   }
 };
 
@@ -28,7 +23,5 @@ export const getMimeTypeByFileType = (fileType: FileTypes) => {
       return "audio/mpeg";
     case FileTypes.MP4:
       return "video/mp4";
-    default:
-      throw new UnsupportedFileType();
   }
 };
