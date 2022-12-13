@@ -13,7 +13,8 @@ export interface IContentQuery {
 
 export interface IContentCreator<T> {
   content: T;
-  item: IItem;
+  item?: IItem;
+  contentId?: string;
 }
 
 export type IAllContent = ILesson | IPakal | IMedia | IInfographic;

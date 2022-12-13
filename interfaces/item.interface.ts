@@ -22,12 +22,14 @@ export interface IMissionItem {
   contentType: ContentType;
   priority?: number;
   editedBy: string | IUser;
+  contentId: string;
 }
 
 export const missionItemKeys: (keyof IMissionItem)[] = [
   "title",
   "contentType",
   "priority",
+  "contentId",
 ];
 
 export interface IItem {
