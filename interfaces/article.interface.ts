@@ -23,7 +23,7 @@ export interface IArticle {
   category: Category;
   comments: string[] | IComment[];
   bestSoldier: string | IBestSoldier;
-  thumbnail: string;
+  thumbNail: string;
 }
 
 export interface IArticleGroup {
