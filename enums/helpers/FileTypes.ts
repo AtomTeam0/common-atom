@@ -1,30 +1,30 @@
 export enum FileTypes {
   IMAGE = "img",
-  MP3 = "mp3",
-  MP4 = "mp4",
+  AUDIO = "audio",
+  VIDEO = "video",
 }
 
 export const getContainerNameByFileType = (fileType: FileTypes) => {
   switch (fileType) {
     case FileTypes.IMAGE:
-      return "images";
-    case FileTypes.MP3:
-      return "audio";
-    case FileTypes.MP4:
-      return "video";
+      return "image-container";
+    case FileTypes.AUDIO:
+      return "audio-container";
+    case FileTypes.VIDEO:
+      return "video-container";
     default:
-      return "other";
+      return "other-container";
   }
 };
 
 export const getMimeTypeByFileType = (fileType: FileTypes) => {
   switch (fileType) {
     case FileTypes.IMAGE:
-      return ["image/jpeg", "image/png"];
-    case FileTypes.MP3:
-      return ["audio/mp3"];
-    case FileTypes.MP4:
-      return ["video/mp4"];
+      return ["image/jpeg", "image/png", "image/gif", "image/svg+xml"];
+    case FileTypes.AUDIO:
+      return ["audio/mpeg", "audio/x-wav"];
+    case FileTypes.VIDEO:
+      return ["video/mp4", "video/x-msvideo", "video/x-ms-wmv", "image/gif"];
     default:
       return [];
   }
