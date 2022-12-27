@@ -5,7 +5,8 @@ import { IArea } from "./area.interface";
 import { IItem } from "./item.interface";
 
 export interface IUserQuery {
-  search: string;
+  search?: string;
+  permission?: Permission;
 }
 
 export interface ILastWatchedQuery {
