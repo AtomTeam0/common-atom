@@ -5,10 +5,8 @@ import { IUser } from "./user.interface";
 
 export interface IMissionQuery {
   editor?: string;
-  weekNum: {
-    weekStartDate: Date;
-    weekEndDate: Date;
-  };
+  startDate: Date;
+  endDate: Date;
 }
 
 export interface IMissionCreator {
