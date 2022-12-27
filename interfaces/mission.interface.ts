@@ -18,7 +18,7 @@ export interface IMissionCreator {
   notes?: string;
   startDate: Date;
   complitionDate: Date;
-  editor: string | IUser;
+  editor: string;
 }
 
 export interface IMission {
