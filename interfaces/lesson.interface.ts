@@ -3,7 +3,7 @@ import { IItem } from "./item.interface";
 import { ITest } from "./test.interface";
 
 export interface ILesson {
-  id?: string;
+  _id?: string;
   goal: string;
   experience: string;
   pdfURL: string;

@@ -22,7 +22,7 @@ export interface IUserMediaPatch {
   note?: string;
 }
 export interface IUser {
-  id?: string;
+  _id?: string;
   firstName: string;
   lastName: string;
   createdAt: Date;

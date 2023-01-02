@@ -20,7 +20,7 @@ export interface IMissionCreator {
 }
 
 export interface IMission {
-  id?: string;
+  _id?: string;
   notes?: string;
   startDate: Date;
   complitionDate: Date;

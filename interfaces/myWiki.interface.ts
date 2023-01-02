@@ -5,7 +5,7 @@ export interface IMyWikiQuery extends IPaginationQuery {
 }
 
 export interface IMyWiki {
-  id?: string;
+  _id?: string;
   word: string;
   defenition: string;
 }

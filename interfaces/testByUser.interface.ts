@@ -14,6 +14,7 @@ export interface ITestByUserQuery {
 }
 
 export interface ITestByUser {
+  _id?: string;
   test: string | ITest;
   item: string | IItem;
   grade: number;

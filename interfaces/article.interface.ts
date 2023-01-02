@@ -15,7 +15,7 @@ export interface IArticleQuery {
 }
 
 export interface IArticle {
-  id?: string;
+  _id?: string;
   createdAt: Date;
   title: string;
   writenBy: string;

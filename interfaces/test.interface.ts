@@ -5,5 +5,6 @@ export interface IQuestion {
 }
 
 export interface ITest {
+  _id?: string;
   questions: IQuestion[];
 }

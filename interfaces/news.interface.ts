@@ -5,7 +5,7 @@ export interface INewsQuery {
 }
 
 export interface INews {
-  id?: string;
+  _id?: string;
   createdAt: Date;
   description: string;
   area: string | IArea;

@@ -1,7 +1,7 @@
 import { IUserChapterPatch } from "./user.interface";
 
 export interface IChapter extends IUserChapterPatch {
-  id?: string;
+  _id?: string;
   title: string;
   description?: string;
   page: number;

@@ -1,7 +1,7 @@
 import { AreaNames } from "../enums/AreaNames";
 
 export interface IArea {
-  id?: string;
+  _id?: string;
   name: AreaNames;
   image: string;
   polygon: number[][];

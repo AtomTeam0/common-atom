@@ -33,7 +33,7 @@ export const missionItemKeys: (keyof IMissionItem)[] = [
 ];
 
 export interface IItem {
-  id?: string;
+  _id?: string;
   updatedAt: Date;
   title: string;
   description: string;
