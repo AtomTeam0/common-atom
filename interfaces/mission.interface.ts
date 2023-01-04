@@ -1,7 +1,7 @@
-import { ContentType } from '../enums/ContentType';
-import { WatchMode } from '../enums/WatchMode';
-import { IItem } from './item.interface';
-import { IUser } from './user.interface';
+import { ContentType } from "../enums/ContentType";
+import { WatchMode } from "../enums/WatchMode";
+import { IItem } from "./item.interface";
+import { IUser } from "./user.interface";
 
 export interface IMissionQuery {
   editor?: string;
