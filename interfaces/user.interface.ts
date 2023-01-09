@@ -9,6 +9,10 @@ export interface IUserQuery {
   permission?: Permission;
 }
 
+export interface IUserAmountQuery {
+  permission: Permission;
+}
+
 export interface ILastWatchedQuery {
   area: string;
   section: Section;
