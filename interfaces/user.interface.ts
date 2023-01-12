@@ -2,9 +2,10 @@ import { Permission } from "../enums/Permission";
 import { Section } from "../enums/Section";
 import { WatchMode } from "../enums/WatchMode";
 import { IArea } from "./area.interface";
+import { IPaginationQuery } from "./helpers/paginator.interface";
 import { IItem } from "./item.interface";
 
-export interface IUserQuery {
+export interface IUserQuery extends IPaginationQuery {
   search?: string;
   permission?: Permission;
 }
