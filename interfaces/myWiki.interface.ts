@@ -1,7 +1,7 @@
 import { IPaginationQuery } from "./helpers/paginator.interface";
 
 export interface IMyWikiQuery extends IPaginationQuery {
-  search: string;
+  search?: string;
 }
 
 export interface IMyWiki {
