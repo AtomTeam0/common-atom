@@ -38,6 +38,7 @@ export interface IItem {
   title: string;
   description: string;
   views: number;
+  timeToRead: number;
   priority: number;
   isActive: boolean;
   isByMission: boolean;
