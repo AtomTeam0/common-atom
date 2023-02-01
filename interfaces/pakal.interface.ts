@@ -3,7 +3,7 @@ import { ITest } from "./test.interface";
 
 export interface IPakal {
   _id?: string;
-  pdfURL: string;
+  pdf: string;
   chapters: string[] | IChapter[];
   test?: string | ITest;
 }

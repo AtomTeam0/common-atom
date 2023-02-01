@@ -19,10 +19,10 @@ export interface IArticle {
   createdAt: Date;
   title: string;
   writenBy: string;
-  pdfURL: string;
+  pdf: string;
   category: Category;
   comments: string[] | IComment[];
-  bestSoldier: string | IBestSoldier;
+  bestSoldier: IBestSoldier;
   thumbNail: string;
 }
 
