@@ -34,3 +34,19 @@ export const getMimeTypeByFileType = (fileType: FileTypes) => {
       return [];
   }
 };
+
+export const getFileSizeByFileType = (fileType: FileTypes) => {
+  const MB = 1024 * 1024;
+  switch (fileType) {
+    case FileTypes.IMAGE:
+      return 2 * MB;
+    case FileTypes.AUDIO:
+      return 10 * MB;
+    case FileTypes.VIDEO:
+      return 20 * MB;
+    case FileTypes.PDF:
+      return 10 * MB;
+    default:
+      return MB;
+  }
+};
