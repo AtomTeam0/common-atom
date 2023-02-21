@@ -30,6 +30,7 @@ export interface IUser {
   _id?: string;
   firstName: string;
   lastName: string;
+  personalId: string;
   createdAt: Date;
   permission: Permission;
   area: string | IArea;
