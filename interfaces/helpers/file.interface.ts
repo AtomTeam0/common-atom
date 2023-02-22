@@ -4,6 +4,6 @@ export interface IFileDetails {
 }
 
 export interface IFileValidator {
-   maxFileSize: string,
+   maxFileSize: number,
    allowedMimeTypes: string[],
 }
