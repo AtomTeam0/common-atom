@@ -1,6 +1,7 @@
 export interface IFileDetails {
    filepath: string,
-   originalFilename: string
+   originalFilename: string,
+   mimeType: string,
 }
 
 export interface IFileValidator {
