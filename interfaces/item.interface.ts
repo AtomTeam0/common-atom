@@ -43,7 +43,7 @@ export interface IItem {
   isActive: boolean;
   isByMission: boolean;
   sections: Section[];
-  categories: Category[];
+  categories: Category[] | Category;
   corps: Corp[];
   grade: Grade;
   contentType: ContentType;
@@ -54,9 +54,4 @@ export interface IItem {
   unit: string | IUnit;
   similarItems: string[] | IItem[];
   isFavorite?: boolean;
-}
-
-export interface IItemGroup {
-  category: Category;
-  items: IItem[];
 }
