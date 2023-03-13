@@ -10,7 +10,7 @@ import { IPaginationQuery } from "./helpers/paginator.interface";
 
 export interface IItemQuery extends IPaginationQuery {
   areaId?: string;
-  section?: Section;
+  sections?: Section[];
   categories?: Category[];
   contentType?: ContentType;
   search?: string;
