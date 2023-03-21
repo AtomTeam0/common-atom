@@ -19,18 +19,22 @@ export interface ILastWatchedQuery {
   section: Section;
 }
 export interface IUserChapterPatch {
-  mode: WatchMode;
+  mode?: WatchMode;
 }
 
 export interface IUserMediaPatch {
   mode?: WatchMode;
   note?: string;
 }
+
+export interface IUserItemPatch {
+  isFavorite?: boolean;
+}
+
 export interface IUser {
   _id?: string;
   firstName: string;
   lastName: string;
-  personalId: string;
   createdAt: Date;
   permission: Permission;
   area: string | IArea;

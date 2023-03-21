@@ -5,7 +5,7 @@ import { Grade } from "../enums/Grade";
 import { Section } from "../enums/Section";
 import { IArea } from "./area.interface";
 import { IUnit } from "./unit.interface";
-import { IUser } from "./user.interface";
+import { IUser, IUserItemPatch } from "./user.interface";
 import { IPaginationQuery } from "./helpers/paginator.interface";
 
 export interface IItemQuery extends IPaginationQuery {
@@ -32,7 +32,7 @@ export const missionItemKeys: (keyof IMissionItem)[] = [
   "contentId",
 ];
 
-export interface IItem {
+export interface IItem extends IUserItemPatch {
   _id?: string;
   updatedAt: Date;
   title: string;
@@ -53,5 +53,4 @@ export interface IItem {
   areas: string[] | IArea[];
   unit: string | IUnit;
   similarItems: string[] | IItem[];
-  isFavorite?: boolean;
 }
