@@ -50,6 +50,11 @@ export interface IUserUpdater extends IUser {
   toggleEmployee?: string;
 }
 
+export interface IUserAuthUpdater {
+  firstName?: string;
+  lastName?: string;
+}
+
 export const otherUserKeys: (keyof IUserUpdater)[] = [
   "permission",
   "toggleEmployee",
