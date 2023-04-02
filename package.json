@@ -1,16 +1,23 @@
 {
-  "name": "common",
+  "name": "common-atom",
   "version": "1.0.0",
-  "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
-  "main": "index.js",
+  "description": "A library of interfaces and enums",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["typescript"],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "eslint": "^8.29.0",
+  "dependencies": {
     "typescript": "^4.9.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtomTeam0/common-atom.git"
+  },
+
+  "devDependencies": {
+    "eslint": "^8.29.0"
   }
 }
