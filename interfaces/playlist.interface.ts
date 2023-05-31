@@ -1,6 +1,6 @@
 import { ISubject } from "./subject.interface";
 
-export interface IBook {
+export interface IPlaylist {
     _id?: string;
     title: string;
     author: string;
