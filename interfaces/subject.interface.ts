@@ -32,4 +32,5 @@ export interface ISubjectQuery extends IPaginationQuery {
   publishType?: Publish[];
   degrees?: Degree[];
   compounds?: Compound[];
+  isActive?: boolean; 
 }
