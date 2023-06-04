@@ -6,11 +6,16 @@ import {CombatShapes} from "../enums/CombatShapes";
 import { Functions } from "../enums/Functions";
 import { IBook } from "./book.interface";
 
+export interface IPageRange {
+    from: number;
+    to: number;
+  }
+
 export interface ISubject {
     _id?: string;
     title: string;
     priority: number;
-    pages: number[];
+    pages: (IPageRange | number)[];
     book: string | IBook;
     jobs: Job[];
     publishType: Publish[];
