@@ -29,7 +29,7 @@ export interface ISubject {
 export interface ISubjectQuery extends IPaginationQuery {
   bookId?: string;
   jobs?: Job[];
-  publishType?: Publish[];
+  publishTypes?: Publish[];
   degrees?: Degree[];
   compounds?: Compound[];
   isActive?: boolean; 
