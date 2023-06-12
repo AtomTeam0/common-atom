@@ -1,5 +1,3 @@
-import {Corp} from "../enums/Corp";
-
 export interface IBook {
     _id?: string;
     title: string;
@@ -10,6 +8,6 @@ export interface IBook {
     createdAt: Date;
     pdf: string;
     thumbNail: string;
-    corp: string | Corp
+    corp: string
   }
   
