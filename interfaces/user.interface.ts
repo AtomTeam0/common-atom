@@ -33,8 +33,7 @@ export interface IUserItemPatch {
 
 export interface IUser {
   _id?: string;
-  firstName: string;
-  lastName: string;
+  name: string;
   createdAt: Date;
   permission: Permission;
   area: string | IArea;
@@ -51,8 +50,7 @@ export interface IUserUpdater extends IUser {
 }
 
 export interface IUserAuthUpdater {
-  firstName?: string;
-  lastName?: string;
+  name: string;
 }
 
 export const otherUserKeys: (keyof IUserUpdater)[] = [
