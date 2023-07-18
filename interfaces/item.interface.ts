@@ -12,6 +12,7 @@ export interface IItemQuery extends IPaginationQuery {
   areaId?: string;
   sections?: Section[];
   categories?: Category[];
+  grades?: Grade[];
   contentType?: ContentType;
   search?: string;
   isActive?: boolean;
