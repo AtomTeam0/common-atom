@@ -1,7 +1,7 @@
 export enum Degree {
-    ONE = "platoon",
-    TWO = "company",
-    THREE = "battalion",
-    FOUR = "brigade",
-    FIVE = "division",
+  CLASS = "class",
+  SQUAD = "squad",
+  TROOP = "troop",
+  BRIGADE = "brigade",
+  DIVISION = "division",
 }

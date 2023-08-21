@@ -1,6 +1,6 @@
 export enum Publish {
-    BASE_TACTICS = "base_military_tactics",
-    DOMAIN_KNOWLEDGE = "domain_knowledge",
-    FIGHT_STRATEGY = "fight_strategy",
-    INSTRUCTIONS = "professional_orders",
+  BASIC_TOL = "basicTol",
+  DISCIPLINARY_TORAH = "disciplinaryTorah",
+  COMBAT_TECHNIQUE = "combatTechnique",
+  PROFESSIONAL_INSTRUCTIONS = "professionalInstructions",
 }

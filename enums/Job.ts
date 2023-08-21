@@ -1,7 +1,6 @@
 export enum Job {
-    MM = "mm",
-    MP = "mp",
-    MAGAD = "magad",
-    MAHAT = "mahat",
-  }
-  
+  MM = "mm",
+  MP = "mp",
+  MAGAD = "magad",
+  MAHAT = "mahat",
+}
