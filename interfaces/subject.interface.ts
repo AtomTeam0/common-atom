@@ -32,5 +32,6 @@ export interface ISubjectQuery {
   degrees?: Degree[];
   compounds?: Compound[];
   combatShapes?: CombatShapes[];
+  functions?: Functions[];
   isActive?: boolean; 
 }
