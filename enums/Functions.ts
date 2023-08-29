@@ -1,7 +1,7 @@
 export enum Functions {
-    MANEUVER = "maneuver",
-    FIRE = "fire",
-    COLLECTION = "collection",
-    ADMINISTRATION = "administration",
-    ORDER_CONTROL = "POSH"
+  MANEUVER = "maneuver",
+  FIRE = "fire",
+  COLLECTION = "collection",
+  ADMINISTRATION = "administration",
+  COMMENDING = "commending",
 }
