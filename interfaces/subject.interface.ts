@@ -5,7 +5,6 @@ import { Publish } from '../enums/Publish';
 import { CombatShapes } from '../enums/CombatShapes';
 import { Functions } from '../enums/Functions';
 import { IBook } from './book.interface';
-import { IPaginationQuery } from './helpers/paginator.interface';
 
 export interface IPageRange {
   from: number;
@@ -26,11 +25,12 @@ export interface ISubject {
   functions: Functions[];
 }
 
-export interface ISubjectQuery extends IPaginationQuery {
+export interface ISubjectQuery {
   bookId?: string;
   jobs?: Job[];
   publishTypes?: Publish[];
   degrees?: Degree[];
   compounds?: Compound[];
+  combatShapes?: CombatShapes[];
   isActive?: boolean; 
 }
