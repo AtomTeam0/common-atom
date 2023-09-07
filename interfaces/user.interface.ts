@@ -33,6 +33,7 @@ export interface IUserItemPatch {
 
 export interface IUser {
   _id?: string;
+  isFirstLogin: boolean;
   name: string;
   createdAt: Date;
   permission: Permission;
