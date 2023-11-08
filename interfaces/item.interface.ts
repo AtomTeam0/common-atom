@@ -1,14 +1,24 @@
-import { Category } from "../enums/Category";
-import { ContentType } from "../enums/ContentType";
-import { Corp } from "../enums/Corp";
-import { Grade } from "../enums/Grade";
-import { Section } from "../enums/Section";
-import { IArea } from "./area.interface";
-import { IUnit } from "./unit.interface";
-import { IUser, IUserItemPatch } from "./user.interface";
-import { IPaginationQuery } from "./helpers/paginator.interface";
+import {Category} from "../enums/Category";
+import {ContentType} from "../enums/ContentType";
+import {Corp} from "../enums/Corp";
+import {Grade} from "../enums/Grade";
+import {Section} from "../enums/Section";
+import {IArea} from "./area.interface";
+import {IUnit} from "./unit.interface";
+import {IUser, IUserItemPatch} from "./user.interface";
+import {IPaginationQuery, IPagingQuery} from "./helpers/paginator.interface";
 
 export interface IItemQuery extends IPaginationQuery {
+  areaId?: string;
+  sections?: Section[];
+  categories?: Category[];
+  grades?: Grade[];
+  contentType?: ContentType;
+  search?: string;
+  isActive?: boolean;
+}
+
+export interface IItemPagingQuery extends IPagingQuery {
   areaId?: string;
   sections?: Section[];
   categories?: Category[];
