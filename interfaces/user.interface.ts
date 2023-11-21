@@ -1,9 +1,8 @@
-import { Permission } from "../enums/Permission";
-import { Section } from "../enums/Section";
-import { WatchMode } from "../enums/WatchMode";
-import { IArea } from "./area.interface";
-import { IPaginationQuery } from "./helpers/paginator.interface";
-import { IItem } from "./item.interface";
+import {Permission} from "../enums/Permission";
+import {Section} from "../enums/Section";
+import {WatchMode} from "../enums/WatchMode";
+import {IPaginationQuery} from "./helpers/paginator.interface";
+import {IItem} from "./item.interface";
 
 export interface IUserQuery extends IPaginationQuery {
   search?: string;
@@ -37,7 +36,6 @@ export interface IUser {
   name: string;
   createdAt: Date;
   permission: Permission;
-  area: string | IArea;
   favorites: string[] | IItem[];
   lastWatched: string[] | IItem[];
   employees?: string[] | IUser[];
