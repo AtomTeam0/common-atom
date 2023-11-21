@@ -9,7 +9,7 @@ import {IPaginationQuery, IPagingQuery} from "./helpers/paginator.interface";
 import {IFilter} from "./filter.interface";
 
 export interface IItemQuery extends IPaginationQuery {
-  filterId?: string;
+  filters?: string;
   sections?: Section[];
   categories?: Category[];
   grades?: Grade[];
