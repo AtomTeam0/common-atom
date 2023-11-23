@@ -65,3 +65,8 @@ export interface IItem extends IUserItemPatch {
   unit: string | IUnit;
   similarItems: string[] | IItem[];
 }
+
+export interface IFilteredItem extends IPagingQuery {
+  filters: string[];
+  extendedFilters?: string[];
+}
