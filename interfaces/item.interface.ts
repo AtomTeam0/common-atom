@@ -68,5 +68,5 @@ export interface IItem extends IUserItemPatch {
 
 export interface IFilteredItem extends IPagingQuery {
   filters: string[];
-  extendedFilters?: string[];
+  optionalFilters?: string[];
 }
