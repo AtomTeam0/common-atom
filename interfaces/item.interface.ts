@@ -71,4 +71,4 @@ export interface IFilteredItem extends IPagingQuery {
   optionalFilters?: string[];
 }
 
-export type GroupedItems = {[key: number]: IFilter[]}
+export type GroupedItems = {[key: number]: IItem[]}
