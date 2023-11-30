@@ -8,3 +8,5 @@ export interface IFilter{
     timeDeleted?: Date;
     thumbNail?: string;
 }
+
+export type FiltersLevels = { [level in number]: IFilter[] };
