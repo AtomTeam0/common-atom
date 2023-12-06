@@ -68,7 +68,7 @@ export interface IItem extends IUserItemPatch {
 
 export interface IFilteredItem extends IPagingQuery {
   filters: string[];
-  optionalFilters?: string[];
+  groupedByItems?: string[];
 }
 
 export type GroupedItems = {[key: string]: IItem[]}
