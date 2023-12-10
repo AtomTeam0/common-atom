@@ -9,4 +9,7 @@ export interface IFilter{
     thumbNail?: string;
 }
 
-export type FiltersLevels = { [level in number]: IFilter[] };
+export type SingleFilterPerLevel = { [level in number]: IFilter };
+
+export type MultipleFiltersPerLevel = { [level in number]: IFilter[] };
+
