@@ -3,6 +3,10 @@ export interface IPaginationQuery {
   limit?: number;
 }
 
+export interface IPagingQuery {
+    page?: number;
+}
+
 export interface IPaginator<T> {
   metadata: {
     totalDocs: number;
