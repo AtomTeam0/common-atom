@@ -75,7 +75,7 @@ export interface IFilteredItem extends IPagingQuery {
 
 export type GroupedItems = {[key: string]: IItem[]}
 
-export type narrowedItem = {
+export type NarrowedItem = {
   _id: string;
   updatedAt: Date;
   title: string;
@@ -85,7 +85,7 @@ export type narrowedItem = {
   filters: string[] | IFilter[];
 }
 
-export type contentTableItem = {
+export type ContentTableItem = {
   _id: string;
   updatedAt: Date;
   title: string;
