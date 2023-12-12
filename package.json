@@ -1,6 +1,6 @@
 {
   "name": "common-atom",
-  "version": "1.0.27-eytan-dev-2",
+  "version": "1.0.27-eytan-dev-3",
   "description": "A library of interfaces and enums",
   "main": "index.ts",
   "scripts": {

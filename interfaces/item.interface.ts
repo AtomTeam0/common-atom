@@ -49,9 +49,9 @@ export interface IItem extends IUserItemPatch {
   updatedAt: Date;
   title: string;
   description: string;
-  views: number;
   timeToRead: number;
   priority: number;
+  views: number;
   isActive: boolean;
   isByMission: boolean;
   sections: Section[];
@@ -74,3 +74,26 @@ export interface IFilteredItem extends IPagingQuery {
 }
 
 export type GroupedItems = {[key: string]: IItem[]}
+
+export type narrowedItem = {
+  _id: string;
+  updatedAt: Date;
+  title: string;
+  views: number;
+  isActive: boolean;
+  editedBy: string | IUser;
+  filters: string[] | IFilter[];
+}
+
+export type contentTableItem = {
+  _id: string;
+  updatedAt: Date;
+  title: string;
+  views: number;
+  isActive: boolean;
+  editedBy: string | IUser;
+  filter1: string[];
+  filter2: string[];
+  filter3: string[];
+
+}
