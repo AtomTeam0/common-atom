@@ -7,6 +7,7 @@ import {IUnit} from "./unit.interface";
 import {IUser, IUserItemPatch} from "./user.interface";
 import {IPaginationQuery, IPagingQuery} from "./helpers/paginator.interface";
 import {IFilter} from "./filter.interface";
+import {IWorld} from "./world.interface";
 
 export interface IItemQuery extends IPaginationQuery {
   filters?: string[];
@@ -64,7 +65,7 @@ export interface IItem extends IUserItemPatch {
   filters: string[] | IFilter[];
   unit: string | IUnit;
   similarItems: string[] | IItem[];
-  world: string
+  world: string | IWorld;
 }
 
 export interface IFilteredItem extends IPagingQuery {
