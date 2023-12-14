@@ -8,6 +8,7 @@ import {IUser, IUserItemPatch} from "./user.interface";
 import {IPaginationQuery, IPagingQuery} from "./helpers/paginator.interface";
 import {IFilter} from "./filter.interface";
 import {IWorld} from "./world.interface";
+import {TableRow} from "./table.interface";
 
 export interface IItemQuery extends IPaginationQuery {
   filters?: string[];
@@ -75,8 +76,7 @@ export interface IFilteredItem extends IPagingQuery {
 
 export type GroupedItems = {[key: string]: IItem[]}
 
-export type NarrowedItem = {
-  _id: string;
+export interface NarrowedItem extends TableRow <string> {
   updatedAt: Date;
   title: string;
   views: number;
@@ -85,8 +85,7 @@ export type NarrowedItem = {
   filters: string[] | IFilter[];
 }
 
-export type ContentTableItem = {
-  _id: string;
+export interface ContentTableItem extends TableRow <string> {
   updatedAt: Date;
   title: string;
   views: number;
