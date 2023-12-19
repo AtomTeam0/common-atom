@@ -13,3 +13,12 @@ export type SingleFilterPerLevel = { [level in number]: IFilter };
 
 export type MultipleFiltersPerLevel = { [level in number]: IFilter[] };
 
+export type FiltersGroup = {
+    _id: string;
+    name: string;
+    world: string;
+    level: number;
+    filters: string[];
+    conditionFilters?: string[];
+};
+
