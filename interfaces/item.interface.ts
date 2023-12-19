@@ -7,7 +7,7 @@ import {IUnit} from "./unit.interface";
 import {IUser, IUserItemPatch} from "./user.interface";
 import {IPaginationQuery, IPagingQuery} from "./helpers/paginator.interface";
 import {IFilter} from "./filter.interface";
-import {IWorld} from "./world.interface";
+import {World} from "./world.interface";
 import {TableRow} from "./table.interface";
 
 export interface IItemQuery extends IPaginationQuery {
@@ -66,7 +66,7 @@ export interface IItem extends IUserItemPatch {
   filters: string[] | IFilter[];
   unit: string | IUnit;
   similarItems: string[] | IItem[];
-  world?: string | IWorld;
+  world?: string | World;
 }
 
 export interface IFilteredItem extends IPagingQuery {
@@ -85,14 +85,14 @@ export interface NarrowedItem extends TableRow <string> {
   filters: string[] | IFilter[];
 }
 
+type filterColumns = {[key: string]: string[]}
+
 export interface ContentTableItem extends TableRow <string> {
   updatedAt: Date;
   title: string;
   views: number;
   isActive: boolean;
   editedBy: string | IUser;
-  filter1: string[];
-  filter2: string[];
-  filter3: string[];
+  filters: filterColumns;
 
 }

@@ -1,4 +1,4 @@
-export interface IWorld {
+export interface World {
   _id: string;
   name: string;
   color: string;
