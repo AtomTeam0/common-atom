@@ -19,6 +19,6 @@ export type FiltersGroup = {
     world: string;
     level: number;
     filters: string[];
-    conditionFilters?: string[];
+    ancestorFilters?: string[];
 };
 
