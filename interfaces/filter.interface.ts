@@ -1,5 +1,3 @@
-import {World} from "./world.interface";
-
 export interface IFilter{
     _id: string;
     level: number;
@@ -14,13 +12,4 @@ export interface IFilter{
 export type SingleFilterPerLevel = { [level in number]: IFilter };
 
 export type MultipleFiltersPerLevel = { [level in number]: IFilter[] };
-
-export type FiltersGroup = {
-    _id: string;
-    name: string;
-    world: string | World;
-    level: number;
-    filters: string[] | IFilter[];
-    ancestorFilters?: string[] | IFilter[];
-};
 
