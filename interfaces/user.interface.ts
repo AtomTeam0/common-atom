@@ -1,8 +1,8 @@
-import {Permission} from "../enums/Permission";
-import {Section} from "../enums/Section";
-import {WatchMode} from "../enums/WatchMode";
-import {IPaginationQuery} from "./helpers/paginator.interface";
-import {IItem} from "./item.interface";
+import { Permission } from "../enums/Permission";
+import { Section } from "../enums/Section";
+import { WatchMode } from "../enums/WatchMode";
+import { IPaginationQuery } from "./helpers/paginator.interface";
+import { IItem } from "./item.interface";
 
 export interface IUserQuery extends IPaginationQuery {
   search?: string;
@@ -24,6 +24,10 @@ export interface IUserChapterPatch {
 export interface IUserMediaPatch {
   mode?: WatchMode;
   note?: string;
+}
+
+export interface IUserVideoPatch {
+  mode?: WatchMode;
 }
 
 export interface IUserItemPatch {
