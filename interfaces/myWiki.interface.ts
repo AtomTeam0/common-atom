@@ -8,5 +8,4 @@ export interface IMyWiki {
   _id?: string;
   word: string;
   defenition: string;
-  isByViewer: boolean;
 }
