@@ -10,6 +10,11 @@ export interface IContentQuery {
   contentType: ContentType;
 }
 
+export interface ICreateContentQuery {
+  contentType: ContentType;
+  content: IAllContent;
+}
+
 export interface IContentCreator<T> {
   content: T;
   item?: IItem;
