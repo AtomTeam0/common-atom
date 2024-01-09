@@ -67,6 +67,12 @@ export interface IItem extends IUserItemPatch {
 export interface IItemWithContent extends IItem {
   content: IAllContent;
 }
+
+export interface IUpdateItemQuery
+  extends Partial<Omit<IItemWithContent, "_id" | "content">> {
+  _id: string;
+  content?: Partial<Omit<IAllContent, "_id">> & { _id: string };
+}
 export interface IFilteredItem extends IPagingQuery {
   filters: string[];
   groupedByFilters?: string[];

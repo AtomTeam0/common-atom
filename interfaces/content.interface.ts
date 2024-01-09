@@ -15,6 +15,11 @@ export interface ICreateContentQuery {
   content: IAllContent;
 }
 
+export interface IUpdateContentQuery {
+  contentType: ContentType;
+  content: Partial<Omit<IAllContent, "_id">> & { _id: string };
+}
+
 export interface IContentCreator<T> {
   content: T;
   item?: IItem;
