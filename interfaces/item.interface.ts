@@ -8,6 +8,7 @@ import { IPaginationQuery, IPagingQuery } from "./helpers/paginator.interface";
 import { IFilter } from "./filter.interface";
 import { Status } from "../enums/Status";
 import { World } from "./world.interface";
+import { IAllContent } from "./content.interface";
 
 export interface IItemQuery extends IPaginationQuery {
   filters?: string[];
@@ -63,6 +64,9 @@ export interface IItem extends IUserItemPatch {
   editedBy: string | IUser;
 }
 
+export interface IItemWithContent extends IItem {
+  content: IAllContent;
+}
 export interface IFilteredItem extends IPagingQuery {
   filters: string[];
   groupedByFilters?: string[];
