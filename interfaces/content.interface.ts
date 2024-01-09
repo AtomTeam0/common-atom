@@ -1,9 +1,5 @@
 import { ContentType } from "../enums/ContentType";
-import { IInfographic } from "./infographic.interface";
 import { IItem } from "./item.interface";
-import { ILesson } from "./lesson.interface";
-import { IMedia } from "./media.interface";
-import { IPakal } from "./pakal.interface";
 import { IDocument } from "./document.interface";
 import { IVideo } from "./video.interface";
 import { IAudio } from "./audio.interface";
