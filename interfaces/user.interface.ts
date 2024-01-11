@@ -3,6 +3,7 @@ import { Section } from "../enums/Section";
 import { WatchMode } from "../enums/WatchMode";
 import { IPaginationQuery } from "./helpers/paginator.interface";
 import { IItem } from "./item.interface";
+import { World } from "./world.interface";
 
 export interface IUserQuery extends IPaginationQuery {
   search?: string;
@@ -45,6 +46,7 @@ export interface IUser {
   employees?: string[] | IUser[];
   media: ({ mediaId: string } & IUserMediaPatch)[];
   chapters: ({ chapterId: string } & IUserChapterPatch)[];
+  world?: string | World;
 }
 
 export interface IUserUpdater extends IUser {
