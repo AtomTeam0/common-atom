@@ -1,14 +1,23 @@
 import { ContentType } from "../enums/ContentType";
-import { IInfographic } from "./infographic.interface";
 import { IItem } from "./item.interface";
-import { ILesson } from "./lesson.interface";
-import { IMedia } from "./media.interface";
-import { IPakal } from "./pakal.interface";
+import { IDocument } from "./document.interface";
+import { IVideo } from "./video.interface";
+import { IAudio } from "./audio.interface";
+import { IImage } from "./image.interface";
 
 export interface IContentQuery {
-  item: string;
   contentId: string;
   contentType: ContentType;
+}
+
+export interface ICreateContentQuery {
+  contentType: ContentType;
+  content: IAllContent;
+}
+
+export interface IUpdateContentQuery {
+  contentType: ContentType;
+  content: Partial<Omit<IAllContent, "_id">> & { _id: string };
 }
 
 export interface IContentCreator<T> {
@@ -17,4 +26,4 @@ export interface IContentCreator<T> {
   contentId?: string;
 }
 
-export type IAllContent = ILesson | IPakal | IMedia | IInfographic;
+export type IAllContent = IDocument | IVideo | IAudio | IImage;

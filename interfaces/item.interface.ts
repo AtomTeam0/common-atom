@@ -1,13 +1,14 @@
-import {Category} from "../enums/Category";
-import {ContentType} from "../enums/ContentType";
-import {Corp} from "../enums/Corp";
-import {Grade} from "../enums/Grade";
-import {Section} from "../enums/Section";
-import {IUnit} from "./unit.interface";
-import {IUser, IUserItemPatch} from "./user.interface";
-import {IPaginationQuery, IPagingQuery} from "./helpers/paginator.interface";
-import {IFilter} from "./filter.interface";
-import {World} from "./world.interface";
+import { Category } from "../enums/Category";
+import { ContentType } from "../enums/ContentType";
+import { Grade } from "../enums/Grade";
+import { Section } from "../enums/Section";
+import { IUnit } from "./unit.interface";
+import { IUser, IUserItemPatch } from "./user.interface";
+import { IPaginationQuery, IPagingQuery } from "./helpers/paginator.interface";
+import { IFilter } from "./filter.interface";
+import { Status } from "../enums/Status";
+import { World } from "./world.interface";
+import { IAllContent } from "./content.interface";
 
 export interface IItemQuery extends IPaginationQuery {
   filters?: string[];
@@ -49,28 +50,32 @@ export interface IItem extends IUserItemPatch {
   updatedAt: Date;
   title: string;
   description: string;
-  timeToRead: number;
-  priority: number;
   views: number;
+  priority: number;
+  timeToRead: number;
   isActive: boolean;
-  isByMission: boolean;
-  sections: Section[];
-  categories: Category[] | Category;
-  corps: Corp[];
-  grade: Grade;
   contentType: ContentType;
+  status: Status;
   thumbNail: string;
+  unit: string | IUnit;
+  filters: string[] | IFilter[];
+  world: string | World;
   contentId: string;
   editedBy: string | IUser;
-  filters: string[] | IFilter[];
-  unit: string | IUnit;
-  similarItems: string[] | IItem[];
-  world?: string | World;
 }
 
+export interface IItemWithContent extends IItem {
+  content: IAllContent;
+}
+
+export interface IUpdateItemQuery
+  extends Partial<Omit<IItemWithContent, "_id" | "content">> {
+  _id: string;
+  content?: Partial<Omit<IAllContent, "_id">> & { _id: string };
+}
 export interface IFilteredItem extends IPagingQuery {
   filters: string[];
   groupedByFilters?: string[];
 }
 
-export type GroupedItems = {[key: string]: IItem[]}
+export type GroupedItems = { [key: string]: IItem[] };

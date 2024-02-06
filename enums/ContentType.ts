@@ -1,9 +1,6 @@
 export enum ContentType {
-  LESSON = "lesson",
-  PODCAST = "podcast",
+  DOCUMENT = "document",
   VIDEO = "video",
-  PAKAL = "pakal",
-  LOMDA = "lomda",
-  INFOGRAPHIC = "infographic",
-  GAME = "game",
+  AUDIO = "audio",
+  IMAGE = "image",
 }
