@@ -9,4 +9,6 @@ export interface IMyWiki {
   word: string;
   defenition: string;
   isByViewer?: boolean;
+  createdBy?: string;
+  approvedBy?: string;
 }
