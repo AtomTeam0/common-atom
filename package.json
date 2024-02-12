@@ -1,6 +1,6 @@
 {
   "name": "common-atom",
-  "version": "1.0.32-dev11",
+  "version": "1.0.32-dev12",
   "description": "A library of interfaces and enums",
   "main": "index.ts",
   "scripts": {
