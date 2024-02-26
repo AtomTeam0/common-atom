@@ -1,4 +1,4 @@
-export interface IPaginationQuery {
+export type IPaginationQuery = {
   skip?: number;
   limit?: number;
 }
