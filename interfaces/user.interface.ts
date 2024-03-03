@@ -5,14 +5,16 @@ import { IPaginationQuery } from "./helpers/paginator.interface";
 import { IItem } from "./item.interface";
 import { World } from "./world.interface";
 
-export interface IUserQuery extends IPaginationQuery {
+export type IUserQuery = IPaginationQuery & {
   search?: string;
-  permission?: Permission;
-}
+  permission?: Permission | readonly Permission[];
+};
 
 export interface IUserAmountQuery {
-  permission: Permission;
+  permission: Permission | readonly Permission[];
 }
+
+export type userAmountObject = Partial<Record<Permission, number>>;
 
 export interface ILastWatchedQuery {
   area: string;
