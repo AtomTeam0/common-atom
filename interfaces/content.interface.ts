@@ -4,6 +4,7 @@ import { IDocument } from "./document.interface";
 import { IVideo } from "./video.interface";
 import { IAudio } from "./audio.interface";
 import { IImage } from "./image.interface";
+import { Link } from "./link";
 
 export interface IContentQuery {
   contentId: string;
@@ -26,4 +27,4 @@ export interface IContentCreator<T> {
   contentId?: string;
 }
 
-export type IAllContent = IDocument | IVideo | IAudio | IImage;
+export type IAllContent = IDocument | IVideo | IAudio | IImage | Link;
