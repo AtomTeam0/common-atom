@@ -28,3 +28,5 @@ export interface IContentCreator<T> {
 }
 
 export type IAllContent = IDocument | IVideo | IAudio | IImage | Link;
+
+export type AllFileContent = Exclude<IAllContent, Link>;

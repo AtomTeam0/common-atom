@@ -5,3 +5,10 @@ export enum ContentType {
   IMAGE = "image",
   LINK = "link",
 }
+
+export enum FileContentType {
+  DOCUMENT = "document",
+  VIDEO = "video",
+  AUDIO = "audio",
+  IMAGE = "image",
+}
