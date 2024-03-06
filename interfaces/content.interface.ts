@@ -13,12 +13,12 @@ export interface IContentQuery {
 
 export interface ICreateContentQuery {
   contentType: ContentType;
-  content: IAllContent;
+  content: string;
 }
 
 export interface IUpdateContentQuery {
   contentType: ContentType;
-  content: Partial<Omit<IAllContent, "_id">> & { _id: string };
+  content: string;
 }
 
 export interface IContentCreator<T> {
