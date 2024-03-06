@@ -1,3 +1,5 @@
+import { pipe, values, without, filter } from "lodash/fp";
+
 export enum ContentType {
   DOCUMENT = "document",
   VIDEO = "video",
@@ -5,10 +7,7 @@ export enum ContentType {
   IMAGE = "image",
   LINK = "link",
 }
-
-export enum FileContentType {
-  DOCUMENT = "document",
-  VIDEO = "video",
-  AUDIO = "audio",
-  IMAGE = "image",
-}
+export const FileContentType = filter(
+  (contentType) => contentType !== ContentType.LINK,
+  values(ContentType),
+);
