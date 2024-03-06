@@ -13,12 +13,13 @@ export interface IContentQuery {
 
 export interface ICreateContentQuery {
   contentType: ContentType;
-  content: string|Express.Multer.File;
+  content: string | Express.Multer.File;
 }
 
 export interface IUpdateContentQuery {
   contentType: ContentType;
-  content: string|Express.Multer.File;
+  content: string | Express.Multer.File;
+  contentId: string;
 }
 
 export interface IContentCreator<T> {
