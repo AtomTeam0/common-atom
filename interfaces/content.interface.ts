@@ -18,13 +18,13 @@ export interface ICreateContentQuery {
 
 export interface IUpdateContentQuery {
   contentType: ContentType;
-  content: string;
+  content: string|Express.Multer.File;
 }
 
 export interface IContentCreator<T> {
   content: T;
   item?: IItem;
-  contentId?: string;
+  contentId?: string|Express.Multer.File;
 }
 
 export type IAllContent = IDocument | IVideo | IAudio | IImage | Link;

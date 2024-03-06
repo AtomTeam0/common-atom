@@ -1,6 +1,6 @@
 {
   "name": "common-atom",
-  "version": "1.0.32-dev17",
+  "version": "1.0.32-dev18",
   "description": "A library of interfaces and enums",
   "main": "index.ts",
   "scripts": {
@@ -17,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/multer": "^1.4.11",
     "typescript": "^4.9.4"
   },
   "repository": {
