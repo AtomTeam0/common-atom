@@ -6,7 +6,7 @@ export enum ContentType {
   LINK = "link",
 }
 
-export const fileContentTypes: (
+export const FileContentType: (
   | ContentType.AUDIO
   | ContentType.DOCUMENT
   | ContentType.IMAGE
@@ -18,4 +18,4 @@ export const fileContentTypes: (
   ContentType.VIDEO,
 ];
 
-export type FileContentType = (typeof fileTypes)[number];
+export type FileContentType = (typeof FileContentType)[number];
