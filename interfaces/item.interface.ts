@@ -63,7 +63,7 @@ export interface IItem extends IUserItemPatch {
   world: string | World;
   contentId: string;
   editedBy: string | IUser;
-  chapters: string[] | IChapter[];
+  chapters?: string[] | IChapter[];
 }
 
 export interface IItemWithContent extends IItem {
