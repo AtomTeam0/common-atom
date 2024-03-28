@@ -9,6 +9,7 @@ import { IFilter } from "./filter.interface";
 import { Status } from "../enums/Status";
 import { World } from "./world.interface";
 import { IAllContent } from "./content.interface";
+import { IChapter } from "./chapter.interface";
 
 export interface IItemQuery extends IPaginationQuery {
   filters?: string[];
@@ -62,6 +63,7 @@ export interface IItem extends IUserItemPatch {
   world: string | World;
   contentId: string;
   editedBy: string | IUser;
+  chapters: string[] | IChapter[];
 }
 
 export interface IItemWithContent extends IItem {
