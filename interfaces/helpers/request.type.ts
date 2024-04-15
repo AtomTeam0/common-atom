@@ -1,9 +1,10 @@
 import { Request as expressRequest } from "express";
 
-type RequestParams = Record<string, string>;
-type RequestBody = object;
-type RequestQuery = Record<
-  string,
+type ReadonlyRecord<T> = Readonly<Record<string, T>>;
+
+type RequestParams = ReadonlyRecord<string>;
+type RequestBody = ReadonlyRecord<unknown>;
+type RequestQuery = ReadonlyRecord<
   string | boolean | number | string[] | boolean[] | number[]
 >;
 
@@ -14,7 +15,7 @@ export type Request<
     body?: RequestBody;
     query?: RequestQuery;
     params?: RequestParams;
-  } & Record<string, unknown> = {}
+  } & ReadonlyRecord<unknown> = {}
 > = expressRequest<
   defaultTo<T["params"], RequestParams>,
   object,
