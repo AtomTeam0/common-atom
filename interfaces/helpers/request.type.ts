@@ -2,10 +2,7 @@ import { Request as expressRequest } from "express";
 
 type RequestParams = Record<string, string>;
 type RequestBody = Record<string, unknown>;
-type RequestQuery = Record<
-  string,
-  string | boolean | number | string[] | boolean[] | number[]
->;
+type RequestQuery = Record<string, unknown>;
 
 type defaultTo<T, R> = T extends R ? T : R;
 
