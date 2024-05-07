@@ -1,14 +1,14 @@
 import { IPaginationQuery } from "./helpers/paginator.interface";
 
-export interface IMyWikiQuery extends IPaginationQuery {
+export type IMyWikiQuery = IPaginationQuery & {
   search?: string;
-}
+};
 
-export interface IMyWiki {
+export type IMyWiki = {
   _id?: string;
   word: string;
   defenition: string;
   isByViewer?: boolean;
   createdBy?: string;
   approvedBy?: string;
-}
+};

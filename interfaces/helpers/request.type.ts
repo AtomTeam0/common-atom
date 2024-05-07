@@ -1,8 +1,8 @@
 import { Request as expressRequest } from "express";
 
 type RequestParams = Record<string, string>;
-type RequestBody = object;
-type RequestQuery = Record<string, string | string[]>;
+type RequestBody = Record<string, unknown>;
+type RequestQuery = Record<string, unknown>;
 
 type defaultTo<T, R> = T extends R ? T : R;
 
@@ -11,7 +11,7 @@ export type Request<
     body?: RequestBody;
     query?: RequestQuery;
     params?: RequestParams;
-  } & Record<string, unknown>
+  } & Record<string, unknown> = {}
 > = expressRequest<
   defaultTo<T["params"], RequestParams>,
   object,

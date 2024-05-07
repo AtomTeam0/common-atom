@@ -3,7 +3,7 @@ export type IPaginationQuery = {
   limit?: number;
 }
 
-export interface IPagingQuery {
+export type IPagingQuery = {
     page?: number;
 }
 
