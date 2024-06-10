@@ -11,7 +11,7 @@ import { World } from "./world.interface";
 import { IAllContent } from "./content.interface";
 import { IChapter } from "./chapter.interface";
 
-export interface IItemQuery extends IPaginationQuery {
+export type IItemQuery = IPaginationQuery & {
   filters?: string[];
   sections?: Section[];
   categories?: Category[];
@@ -19,7 +19,7 @@ export interface IItemQuery extends IPaginationQuery {
   contentType?: ContentType;
   search?: string;
   isActive?: boolean;
-}
+};
 
 export interface IItemPagingQuery extends IPagingQuery {
   filters?: string[];
@@ -75,7 +75,7 @@ export interface IUpdateItemQuery
   _id: string;
   content?: Partial<Omit<IAllContent, "_id">> & { _id: string };
 }
-export interface IFilteredItem extends IPagingQuery {
+export type IFilteredItem = IPagingQuery & {
   filters: string[];
   groupedByFilters?: string[];
 }

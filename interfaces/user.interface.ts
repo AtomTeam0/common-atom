@@ -7,12 +7,12 @@ import { World } from "./world.interface";
 
 export type IUserQuery = IPaginationQuery & {
   search?: string;
-  permission?: Permission | readonly Permission[];
+  permission?: Permission | Permission[];
 };
 
-export interface IUserAmountQuery {
-  permission: Permission | readonly Permission[];
-}
+export type IUserAmountQuery = {
+  permission: Permission | Permission[];
+};
 
 export type userAmountObject = Partial<Record<Permission, number>>;
 
@@ -20,9 +20,9 @@ export interface ILastWatchedQuery {
   area: string;
   section: Section;
 }
-export interface IUserChapterPatch {
+export type IUserChapterPatch = {
   mode?: WatchMode;
-}
+};
 
 export interface IUserMediaPatch {
   mode?: WatchMode;
@@ -37,7 +37,7 @@ export interface IUserItemPatch {
   isFavorite?: boolean;
 }
 
-export interface IUser {
+export type IUser = {
   _id?: string;
   isFirstLogin: boolean;
   name: string;
@@ -49,7 +49,7 @@ export interface IUser {
   media: ({ mediaId: string } & IUserMediaPatch)[];
   chapters: ({ chapterId: string } & IUserChapterPatch)[];
   world?: string | World;
-}
+};
 
 export interface IUserUpdater extends IUser {
   toggleFavorite?: string;
