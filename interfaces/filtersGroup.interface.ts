@@ -6,7 +6,7 @@ export type FiltersGroup = {
     name: string;
     world: string | World;
     level: number;
-    filters: string[] | IFilter[];
+    filters?: string[] | IFilter[];
     isLast?: boolean;
     ancestorFilters?: string[] | IFilter[];
 };
