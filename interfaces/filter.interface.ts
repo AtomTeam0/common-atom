@@ -7,6 +7,7 @@ export interface IFilter{
     default?: boolean;
     timeDeleted?: Date;
     thumbNail?: string;
+    priority?: number;
 }
 
 export type SingleFilterPerLevel = { [level in number]: IFilter };
